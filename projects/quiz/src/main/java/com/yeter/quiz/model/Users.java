@@ -3,16 +3,24 @@ package com.yeter.quiz.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+
 @Entity
+
 @Data
-@Table
+
+@Table(name = "users")
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
 private Long  id;
+@Column
 private String username;
+@Column
 private String password;
+@Column
 private String email;
+@Column
 private  boolean isAdmin;
     public Users(Long id, String username, String password, String email, boolean isAdmin) {
         super();
