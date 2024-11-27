@@ -17,7 +17,7 @@ public class QuestionService {
     public Questions createQuestion(Questions question) {
 
         return questionRepository.save(question);
-        
+
     }
 
     public Questions getQuestionById(Long id) {

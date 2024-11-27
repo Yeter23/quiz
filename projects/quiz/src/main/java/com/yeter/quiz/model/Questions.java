@@ -21,7 +21,7 @@ public class Questions {
     private  int correctOption;
     private String subject;
     public Questions(Long id, String questionText, String option1, String option2, String option3, String option4,
-                     int correctOption, String technology) {
+                     int correctOption, String subject) {
         super();
         this.id = id;
         this.questionText = questionText;
@@ -89,12 +89,12 @@ public class Questions {
         this.correctOption = correctOption;
     }
 
-    public String getTechnology() {
+    public String getSubject() {
         return subject;
     }
 
-    public void setTechnology(String technology) {
-        this.subject= technology;
+    public void setSubject(String subject) {
+        this.subject= subject;
     }
 
     public Questions() {
