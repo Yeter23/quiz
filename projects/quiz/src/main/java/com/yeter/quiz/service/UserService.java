@@ -6,6 +6,7 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -32,6 +33,7 @@ public class UserService {
 
         // Update edir sonrada save edir  yeni formada database-e
         user.setUsername(updatedUser.getUsername());
+        user.setUsersurname(updatedUser.getUsersurname());
         user.setPassword(updatedUser.getPassword());
         user.setEmail(updatedUser.getEmail());
         user.setAdmin(updatedUser.isAdmin());
@@ -47,5 +49,7 @@ public class UserService {
     public List<Users> getAllUsers() {
         return userRepository.findAll();
     }
+
+
 }
 

@@ -1,6 +1,9 @@
 package com.yeter.quiz.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 
@@ -15,10 +18,22 @@ public class Users {
     @Column
 private Long  id;
 @Column
+@NotNull(message = "ad ad mutleqdir")
+@NotBlank(message = "adi  bos qoymaq olmaz")
+@Size(min = 2,max = 10,message = "adinizi dogru yazin")
 private String username;
+    @Column
+    @NotNull(message = "soyad ad mutleqdir")
+    @NotBlank(message = "soyadi  bos qoymaq olmaz")
+    @Size(min = 2,max = 20,message = "soyadinizi dogru yazin")
+private String usersurname;
 @Column
+@NotNull(message = "parol mutleqdir")
+@NotBlank(message = "parolu bos qoymaq olmaz")
 private String password;
 @Column
+@NotNull(message = "email mutleqdir")
+@NotBlank(message = "emali bos qoymaq olmaz")
 private String email;
 @Column
 private  boolean isAdmin;
@@ -26,6 +41,7 @@ private  boolean isAdmin;
         super();
         this.id = id;
         this.username = username;
+        this.usersurname=usersurname;
         this.password = password;
         this.email = email;
         this.isAdmin = isAdmin;
@@ -45,6 +61,13 @@ private  boolean isAdmin;
 
     public void setUsername(String username) {
         this.username = username;
+    }
+    public String getUsersurname() {
+        return usersurname;
+    }
+
+    public void setUsersurname(String usersurname) {
+        this.usersurname = usersurname;
     }
 
     public String getPassword() {
