@@ -4,7 +4,6 @@ import com.yeter.quiz.model.Questions;
 import com.yeter.quiz.repository.QuestionRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service

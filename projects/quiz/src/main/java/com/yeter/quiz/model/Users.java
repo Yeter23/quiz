@@ -18,7 +18,7 @@ public class Users {
     @Column
 private Long  id;
 @Column
-@NotNull(message = "ad ad mutleqdir")
+@NotNull(message = "ad mutleqdir")
 @NotBlank(message = "adi  bos qoymaq olmaz")
 @Size(min = 2,max = 10,message = "adinizi dogru yazin")
 private String username;

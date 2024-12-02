@@ -64,7 +64,7 @@ public class QuizService {
             optionalQuestions.ifPresent(questionList::add);
         }
 
-       // questionList.forEach(q->System.out.println(q.getQuestionText()));
+
         return questionList;
     }
 }
